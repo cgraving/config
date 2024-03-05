@@ -16,6 +16,7 @@ CASE_SENSITIVE="true"
 ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 
+
 plugins=(
    git
    macos
@@ -25,8 +26,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-source $HOME/.alias.sh
+source $HOME/.alias
 
 fpath=(~/functions $fpath)
 autoload printColors n ewrap
