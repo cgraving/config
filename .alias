@@ -1,1 +1,7 @@
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'alias k="kubectl"
+alias kctx="kubectx"
+alias kns="kubens"
+alias ping='prettyping --nolegend'
+alias top="sudo htop"
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias help='tldr'
