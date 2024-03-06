@@ -1,4 +1,5 @@
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'alias k="kubectl"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias k="kubectl"
 alias kctx="kubectx"
 alias kns="kubens"
 alias ping='prettyping --nolegend'
