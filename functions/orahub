@@ -1,0 +1,26 @@
+#! /bin/zsh
+
+if git status &> /dev/null
+then
+else
+   echo "Not a git repo";
+   return 0
+fi
+
+remoteUrl=$(git remote get-url --all origin)
+
+re="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+)(.git)*$"
+
+if [[ $remoteUrl =~ $re ]]; then
+    protocol=${match[1]}
+    separator=${match[2]}
+    hostname=${match[3]}
+    user=${match[4]}
+    repo=${match[5]}
+
+    url="https://${hostname}/${user}/${repo}"
+    echo "Opening $url"
+    open $url
+else
+    echo "Not a valid git repo"
+fi

@@ -1,0 +1,7 @@
+#! /bin/zsh
+
+unset {http,https,ftp}_proxy
+unset {HTTP,HTTPS}_PROXY
+unset {NO_PROXY,no_proxy}
+
+echo "Proxy unset"

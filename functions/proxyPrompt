@@ -1,0 +1,17 @@
+#! /bin/zsh
+
+connected=$(/opt/cisco/anyconnect/bin/vpn state | grep Connected)
+
+if [[ $connected ]]; then
+  if [[ -z "$HTTPS_PROXY" ]]; then
+    echo ❗️
+  else
+    echo "$"
+  fi
+else
+  if [[ $HTTPS_PROXY ]]; then
+    echo ❕
+  else
+    echo "$"
+  fi
+fi

@@ -1,0 +1,13 @@
+#! /bin/zsh
+
+connected=$(/opt/cisco/anyconnect/bin/vpn state | grep Connected)
+
+if [[ $connected ]]; then
+  export {http,https,ftp}_proxy=$PROXY_SERVER
+  export {HTTP,HTTPS}_PROXY=$PROXY_SERVER
+  export {NO_PROXY,no_proxy}="127.0.0.1,localhost,kubernetes.docker.internal,*.consul.lan,*.us.oracle.com,*.oraclecorp.com,localhost.localdomain,*.local,192.168.99.100"
+
+  echo "Proxy set to $PROXY_SERVER"
+else
+  echo "Proxy not set. VPN not connected"
+fi
