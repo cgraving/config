@@ -1,8 +1,38 @@
+# Configuration
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias k="kubectl"
-alias kctx="kubectx"
-alias kns="kubens"
-alias ping='prettyping --nolegend'
+alias productivity='/usr/bin/git --git-dir=$HOME/.productivity/ --work-tree=$HOME'
+
+# General Stuff
 alias top="sudo htop"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias help='tldr'
+alias hg='history 1 | grep'
+fe () { find . -name $1 -exec vim {} + ; }
+alias ll="ls -hlFG"
+
+
+# Kubernetes Stuff
+alias k="kubectl"
+alias kctx="kubectx"
+alias kns="kubens"
+
+
+# Network Stuff
+alias ping='prettyping --nolegend'
+alias curl="curl -s"
+
+
+# Mac
+alias f='open -a Finder ./'
+trash () { command mv "$@" ~/.Trash ; }
+ql () { qlmanage -p "$*" >& /dev/null; }
+
+
+# Productivity
+alias tw=timew
+alias t=task
+alias ta='task add'
+alias td='task done'
+alias tl='task list'
+
+pt () { gh issue create -a cgraving -t "$*" -b ""; }

@@ -1,0 +1,24 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Carl Graving
+	email = cgraving@gmail.com
+[core]
+	autocrlf = input
+	excludesfile = /Users/cgraving/.gitignore
+[alias]
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	br = branch
+	co = checkout
+	st = status
+	ci = commit
+[merge]
+	tool = gvimdiff
+[pager]
+	branch = false
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[init]
+	defaultBranch = main
