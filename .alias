@@ -30,9 +30,5 @@ ql () { qlmanage -p "$*" >& /dev/null; }
 
 # Productivity
 alias tw=timew
-alias t=task
-alias ta='task add'
-alias td='task done'
-alias tl='task list'
 
 pt () { gh issue create -a cgraving -t "$*" -b ""; }

@@ -13,7 +13,8 @@ export UPDATE_ZSH_DAYS=30
 export GH_REPO=git@github.com:cgraving/productivity.git
 
 DEFAULT_USER=cgraving
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="spaceship"
 CASE_SENSITIVE="true"
 ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
