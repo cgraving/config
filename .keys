@@ -1,0 +1,23 @@
+# home/end fixes for mac & iterm2
+bindkey '^[[H' beginning-of-line
+bindkey -M vicmd '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+bindkey -M vicmd '^[[F' beginning-of-line
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+
+# backspace and ^h working even after
+# returning from command mode
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+
+# ctrl-w removed word backwards
+bindkey '^w' backward-kill-word
+
+# ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
+
+# shift-<direction> for moving up and down in command history when you have multi-line commands
+bindkey -M vicmd 'K' up-history
+bindkey -M vicmd 'J' up-history
